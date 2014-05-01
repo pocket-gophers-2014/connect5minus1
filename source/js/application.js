@@ -1,8 +1,11 @@
 // connect5minus1 Game Controller
 
-// set Listeners
+// On load initation
 $(document).ready(function() {
-  $('#buttons').on('click', '.button', placePiece)
+  var view = new View
+  var board = new Board
+  controller = new gameController(view,board)
+  controller.Initiate()
 })
 
 // GameController base
@@ -15,6 +18,8 @@ function gameController(view,board) {
 
 gameController.prototype = {
   Initiate: function() {
+    var buttonId = '#button-row'
+    var buttonClass = '.buttons'
     setListeners() 
     setCurrentPlayer('player1')
     Display.updateCell(row,colum,player)
@@ -25,9 +30,14 @@ gameController.prototype = {
     Display.updatePlayer(player)
   }
 
-  placePiece: function(event) {
+  setListeners: function(buttonId,buttonClass) {
+    $(buttonId).on('click', buttonClass, placePiece)
+  }
+
+   placePiece: function(event) {
     var columnElement = event
-    
+    var column = columnElement.id
+    board.updateCell(column, currentPlayer)
   }
 
 
