@@ -10,23 +10,21 @@ $(document).ready(function() {
 
 // GameController base
 function gameController(view,board) {
-  view = new view
-  board = new board
-  var currentPlayer = ''
-  Initiate()
+  this.view = new view
+  this.board = new board
+  this.initiate()
 }
 
 gameController.prototype = {
-  Initiate: function() {
-    var buttonId = '#button-row'
+  initiate: function() {
+    var buttonId = this.display
     var buttonClass = '.buttons'
     setListeners() 
     setCurrentPlayer('player1')
     Display.updateCell(row,colum,player)
   }
 
-  setCurrentPlayer: function(player) {
-    currentPlayer = player
+  setCurrentPlayer: function() {
     Display.updatePlayer(player)
   }
 
@@ -38,8 +36,8 @@ gameController.prototype = {
     var columnElement = event
     var column = columnElement.id
     board.updateCell(column, currentPlayer)
+    var pieceData = board.lastPieceAdded()
+    view.updateCell(pieceData)
   }
-
-
 
 }
