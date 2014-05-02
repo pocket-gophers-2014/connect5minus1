@@ -31,8 +31,6 @@ gameController.prototype = {
     console.log("in set listeners")
     $("#button-row").on('click', "button", this.placePiece.bind(this))
     // $("#button-row").on('click', "button", this.assignPiece())
-
-
   },
 
   // applyPieceToBoard: function() {

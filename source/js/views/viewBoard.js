@@ -1,6 +1,4 @@
-function viewBoard() {
-
-}
+function viewBoard() {}
 
 viewBoard.prototype = {
   getCell: function(piece) {
@@ -16,7 +14,7 @@ viewBoard.prototype = {
       currentCell.style.backgroundColor= "red";
     }
     else {
-      currentCell.style.backgroundColor= "black";
+      currentCell = currentCell.style.backgroundColor= "blue";
     }
   }
 }
