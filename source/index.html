@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Connect 5 Minus 1</title>
+    <title>STAR FOURS</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen">
     <script type="text/javascript" src = "js/jquery.js" ></script>
     <script type="text/javascript" src = "js/models/board.js" ></script>
     <script type="text/javascript" src = "js/views/viewBoard.js" ></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:900italic' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="application.js"></script> -->
   </head>
 
   <body>
+      <div class="title grid_14 omega"><h1>STAR FOURS</h1></div>
+      <div class="players grid_7">Jedi Player</div>
+      <div class="players grid_7 omega">Sith Player</div>
+
       <div id="button-row">
-        <button class="button-row" id="1">Button 1</button>
-        <button class="button-row" id="2">Button 2</button>
-        <button class="button-row" id="3">Button 3</button>
-        <button class="button-row" id="4">Button 4</button>
-        <button class="button-row" id="5">Button 5</button>
-        <button class="button-row" id="6">Button 6</button>
-        <button class="button-row" id="7">Button 7</button>
-      </div><br>
-      <br>
-      <br>
-    <div class="board_table">
-      <div class="column">
-        <div class="row row6">Column 1, Row 6</div>
-        <div class="row row5">Column 1, Row 5</div>
-        <div class="row row4">Column 1, Row 4</div>
-        <div class="row row3">Column 1, Row 3</div>
-        <div class="row row2">Column 1, Row 2</div>
-        <div class="row row1">Column 1, Row 1</div>
+        <button class="button-row grid_2 alpha" id="1"></button>
+        <button class="button-row grid_2" id="2"></button>
+        <button class="button-row grid_2" id="3"></button>
+        <button class="button-row grid_2" id="4"></button>
+        <button class="button-row grid_2" id="5"></button>
+        <button class="button-row grid_2" id="6"></button>
+        <button class="button-row grid_2 omega" id="7"></button>
       </div>
-      <div class="column">
-        <div class="row row6">Column 2, Row 6</div>
-        <div class="row row5">Column 2, Row 5</div>
-        <div class="row row4">Column 2, Row 4</div>
-        <div class="row row3">Column 2, Row 3</div>
-        <div class="row row2">Column 2, Row 2</div>
-        <div class="row row1">Column 2, Row 1</div>
+      <div class="board_table">
+        <div class="column grid_2 alpha">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"></div>
+          <div class="row row1"></div>
+        </div>
+        <div class="column grid_2">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"></div>
+          <div class="row row1"></div>
+        </div>
+        <div class="column grid_2">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"></div>
+          <div class="row row1"></div>
+        </div>
+        <div class="column grid_2">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"></div>
+          <div class="row row1"></div>
+        </div>
+        <div class="column grid_2">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"></div>
+          <div class="row row1"></div>
+        </div>
+        <div class="column grid_2">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"></div>
+          <div class="row row1"></div>
+        </div>
+        <div class="column grid_2 omega">
+          <div class="row row6"></div>
+          <div class="row row5"></div>
+          <div class="row row4"></div>
+          <div class="row row3"></div>
+          <div class="row row2"><img src="img/empire_icon.jpeg"</div>
+          <div class="row row1"><img src="img/rebel_icon.jpg"></div>
+        </div>
+
       </div>
-      <div class="column">
-        <div class="row row6">Column 3, Row 6</div>
-        <div class="row row5">Column 3, Row 5</div>
-        <div class="row row4">Column 3, Row 4</div>
-        <div class="row row3">Column 3, Row 3</div>
-        <div class="row row2">Column 3, Row 2</div>
-        <div class="row row1">Column 3, Row 1</div>
+      <div class="grid_14">
+        <audio autoplay>
+          <source src="img/StarWars2.mp3" type="audio/mp3">o>
       </div>
-      <div class="column">
-        <div class="row row6">Column 4, Row 6</div>
-        <div class="row row5">Column 4, Row 5</div>
-        <div class="row row4">Column 4, Row 4</div>
-        <div class="row row3">Column 4, Row 3</div>
-        <div class="row row2">Column 4, Row 2</div>
-        <div class="row row1">Column 4, Row 1</div>
-      </div>
-      <div class="column">
-        <div class="row row6">Column 5, Row 6</div>
-        <div class="row row5">Column 5, Row 5</div>
-        <div class="row row4">Column 5, Row 4</div>
-        <div class="row row3">Column 5, Row 3</div>
-        <div class="row row2">Column 5, Row 2</div>
-        <div class="row row1">Column 5, Row 1</div>
-      </div>
-      <div class="column">
-        <div class="row row6">Column 6, Row 6</div>
-        <div class="row row5">Column 6, Row 5</div>
-        <div class="row row4">Column 6, Row 4</div>
-        <div class="row row3">Column 6, Row 3</div>
-        <div class="row row2">Column 6, Row 2</div>
-        <div class="row row1">Column 6, Row 1</div>
-      </div>
-      <div class="column">
-        <div class="row row6">Column 7, Row 6</div>
-        <div class="row row5">Column 7, Row 5</div>
-        <div class="row row4">Column 7, Row 4</div>
-        <div class="row row3">Column 7, Row 3</div>
-        <div class="row row2">Column 7, Row 2</div>
-        <div class="row row1">Column 7, Row 1</div>
-      </div>
-    </div>
   </body>
 </html>

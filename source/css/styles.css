@@ -1,12 +1,53 @@
-.column, .button-row {
+
+body {
+	background-image: url('../img/space_thumb.gif');
+	color: #FFEA73;
+}
+
+button {
+	background: url('../img/saber_button.jpg');
+	height:96px;
+	width: 96px; 
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+h1{
+	text-align: center;
+	font-size: 48px;
+	padding: 0px,0px,0px,0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.players{
+	text-align: center;
+}
+/*.column {
   float: left;
   margin-right: 2%;
   width: 5%;
   height: 5%;
-}
+}*/
+/*
+.button-row{
+
+}*/
 
 .row {
-  border: 1px solid black;
+  text-align: center;
+  /*border: 1px solid #FFEA73;*/
+  height: 82px;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+
+
+
+
 
 
