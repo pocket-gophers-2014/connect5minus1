@@ -7,26 +7,29 @@ body {
 button {
 	background: url('../img/saber_button.jpg');
 	height:96px;
-	width: 96px; 
-	border-radius: 50px;
+	width: 96px;
+	border-radius: 60px;
 	margin-left: auto;
 	margin-right: auto;
+}
 
+@font-face {
+  font-family: 'starjedi';
+  src: url('Starjedi.ttf');
 }
 
 h1{
 	text-align: center;
-	font-size: 48px;
+	font-size: 70px;
 	padding: 0px,0px,0px,0px;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 900;
+	font-family: 'starjedi';
+	font-weight: 800;
 }
 
 .player1{
 	background: url("../img/rebel_icon.jpg");
-
 	background-repeat: no-repeat;
 }
 
@@ -37,36 +40,43 @@ h1{
 
 #player1{
 	text-align: center;
+  font-family: 'starjedi';
 	/*background-color: red;*/
 }
 
 #player2{
 	text-align: center;
+  font-family: 'starjedi';
 	/*background-color: green;*/
 }
-/*.column {
-  float: left;
-  margin-right: 2%;
-  width: 5%;
-  height: 5%;
-}*/
-/*
-.button-row{
-
-}*/
 
 .row {
+  position: relative;
   text-align: center;
-  /*border: 1px solid #FFEA73;*/
+  /*border: 2px solid #FFEA73;*/
   height: 82px;
   width: 100px;
   margin-right: auto;
   margin-left: auto;
+  position:;
 }
 
+.board_table {
+  /*position:relat;*/
+}
 
+.reset_button {
+  background: url('../img/reset.png');
+  background-repeat: no-repeat;
+  height:96px;
+  width: 96px;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
-
+.current_player {
+  background-color: red;
+}
 
 
