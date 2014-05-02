@@ -12,11 +12,15 @@ viewBoard.prototype = {
   updateCell: function(piece) {
     var currentCell = this.getCell(piece)
     console.log(currentCell)
+    audio=document.getElementById("strike");
+
+    audio.play();
     if (piece.player.id === 1) {
-      currentCell.style.backgroundColor= "red";
+
+      currentCell.classList.add("player1");
     }
     else {
-      currentCell.style.backgroundColor= "black";
+      currentCell.classList.add("player2");
     }
   }
 }
