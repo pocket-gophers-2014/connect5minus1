@@ -5,7 +5,7 @@ function viewBoard() {
 viewBoard.prototype = {
   getCell: function(piece) {
     //find the specific cell
-    var currentCell = document.querySelectorAll('.column')[piece.column].querySelector('.row'+(piece.row+1));
+    var currentCell = document.querySelectorAll('.column')[piece.column-1].querySelector('.row'+(piece.row+1));
     return currentCell;
   },
 
