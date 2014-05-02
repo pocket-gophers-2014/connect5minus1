@@ -5,7 +5,7 @@ $(document).ready(function() {
   var view = new View
   var board = new Board
   controller = new gameController(view,board)
-  controller.Initiate()
+  controller.initiate()
 })
 
 // GameController base
@@ -21,7 +21,7 @@ gameController.prototype = {
   initiate: function() {
     var buttonId = this.view.buttonId
     var buttonClass = this.view.buttonClass
-    this.setListeners(buttonId,buttonClass) 
+    this.setListeners(buttonId,buttonClass)
     this.setPlayerDisplay()
   }
 
