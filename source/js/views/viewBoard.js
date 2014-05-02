@@ -1,11 +1,13 @@
 
 function viewBoard() {
   this.board = document.querySelector('.board_table')
+  this.player1 = document.querySelector('#player1')
+  this.player2 = document.querySelector('#player2')
 }
 
 viewBoard.prototype = {
   getCell: function(piece) {
-    var currentCell = document.querySelectorAll('.column')[piece.column-1].querySelector('.row'+(piece.row+1));
+    var currentCell = document.querySelectorAll('.column')[piece.column-1].querySelector('.row'+(piece.row));
     return currentCell;
   },
 
@@ -69,5 +71,20 @@ viewBoard.prototype = {
 
   clearBoard: function() {
     this.board.innerHTML = null
+  },
+
+  highlightCurrentPlayer: function(currentPlayer) {
+    console.log(currentPlayer.id)
+
+    if (currentPlayer.id === 1)
+    {
+      this.player1.classList.add("current_player")
+      this.player2.classList.remove("current_player")
+    }
+    else
+    {
+      this.player2.classList.add("current_player")
+      this.player1.classList.remove("current_player")
+    }
   }
 }
