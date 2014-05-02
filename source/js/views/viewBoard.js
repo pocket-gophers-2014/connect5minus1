@@ -1,3 +1,4 @@
+
 function viewBoard() {
   this.board = document.querySelector('.board_table')
 }
