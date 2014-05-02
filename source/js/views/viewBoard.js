@@ -74,7 +74,6 @@ viewBoard.prototype = {
   },
 
   highlightCurrentPlayer: function(currentPlayer) {
-    console.log(currentPlayer.id)
 
     if (currentPlayer.id === 1)
     {

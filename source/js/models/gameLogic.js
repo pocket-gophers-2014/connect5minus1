@@ -58,7 +58,7 @@ gameLogic.prototype = {
     }
     return testRow
   },
-  
+
   pieceCol: function() {
     // Function to return array of column coordinates
     var testCol = []
@@ -77,7 +77,7 @@ gameLogic.prototype = {
     var diag1coords = []
     var diag2coords = []
     var diagonal1 = []
-    var diagonal2 = [] 
+    var diagonal2 = []
     //diag1
     for ( var r = sDiags1.row, c = sDiags1.col; ; r--, c++) {
       if (r < args.minRow || c > args.maxCol) {
@@ -136,11 +136,10 @@ gameLogic.prototype = {
       sRow = args.maxRow
       sCol = args.col - (args.maxRow - args.row)
     }
-    return {row: sRow, col: sCol}     
+    return {row: sRow, col: sCol}
   },
 
   diag2sp: function(args) {
-    console.log(args)
     var sRow = 0
     var sCol = 0
     var diffRow = args.row - args.minRow
