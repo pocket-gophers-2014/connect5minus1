@@ -47,7 +47,7 @@ gameController.prototype = {
   },
 
   placePiece: function(event) {
-    var column = event.toElement.id
+    var column = parseInt(event.toElement.id)
     this.board.addPieceToColumn(column)
     var pieceData = this.board.lastPieceAdded()
     this.view.updateCell(pieceData)
