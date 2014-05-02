@@ -25,7 +25,6 @@ Board.prototype = {
   },
 
   lastPieceAdded: function() {
-    console.log(this.board)
     return this.board[this.board.length-1]
   },
 
