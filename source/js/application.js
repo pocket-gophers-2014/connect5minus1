@@ -10,8 +10,8 @@ $(document).ready(function() {
 
 // GameController base
 function gameController(view,board) {
-  this.view = new view
-  this.board = new board
+  this.view = view
+  this.board = board
 }
 
 gameController.prototype = {
