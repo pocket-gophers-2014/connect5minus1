@@ -75,8 +75,14 @@ h1{
   margin-right: auto;
 }
 
-.current_player {
+.current_player1 {
   background-color: red;
+  border-radius: 10px;
+}
+
+.current_player2 {
+  background-color: green;
+  border-radius: 10px;
 }
 
 
