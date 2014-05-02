@@ -12,16 +12,16 @@ gameLogic.prototype = {
     var colCheck = this.pieceCol()
     var diagonal1Check = this.pieceDiagonals().diagonal1
     var diagonal2Check = this.pieceDiagonals().diagonal2
-    if (checkIfFour(rowCheck)) {
+    if (this.checkIfFour(rowCheck)) {
       return true
     }
-    else if (checkIfFour(colCheck)) {
+    else if (this.checkIfFour(colCheck)) {
       return true
     }
-    else if (checkIfFour(diagonal1Check)) {
+    else if (this.checkIfFour(diagonal1Check)) {
       return true
     }
-    else if (checkIfFour(diagonal2Check)) {
+    else if (this.checkIfFour(diagonal2Check)) {
       return true
     }
     else {
@@ -62,8 +62,8 @@ gameLogic.prototype = {
   pieceCol: function() {
     // Function to return array of column coordinates
     var testCol = []
-    for(var i = 0; i < (this.board.length); i++) {
-      if (this.board[i].col === this.pieceData.col) {
+    for(var i = 0; i < this.board.length; i++) {
+      if (this.board[i].column === this.pieceData.column) {
         testCol.push(this.board[i])
       }
     }
@@ -71,7 +71,7 @@ gameLogic.prototype = {
   },
 
   pieceDiagonals: function() {
-    var args = { row: this.pieceData.row, col: this.pieceData.col, minRow: 1, minCol: 1, maxRow: 6, maxCol: 7}
+    var args = { row: this.pieceData.row, col: this.pieceData.column, minRow: 1, minCol: 1, maxRow: 6, maxCol: 7}
     var sDiags1 = this.diag1sp(args)
     var sDiags2 = this.diag2sp(args)
     var diag1coords = []
@@ -87,8 +87,8 @@ gameLogic.prototype = {
         diag1coords.push({row: r, col: c})
       }
     }
-    diagonal1 = this.fetchPieces(diag1coords)
 
+   diagonal1 = this.fetchPieces(diag1coords)
     //diag2
     for ( var r = sDiags2.row, c = sDiags2.col; ; r++, c++) {
       if (r > args.maxRow || c > args.maxCol) {
@@ -98,16 +98,15 @@ gameLogic.prototype = {
         diag2coords.push({row: r, col: c})
       }
     }
-
     diagonal2 = this.fetchPieces(diag2coords)
     return {diagonal1: diagonal1, diagonal2: diagonal2}
   },
 
   fetchPieces: function(args) {
     var pieces = []
-    for (var i = 0; i < (this.board.length); i++) {
-      for (var k = 0; k < (args.length); k++) {
-        if (this.board[i].row === args[k].row && this.board[i].col === args[k].col) {
+    for (var i = 0; i < this.board.length; i++) {
+      for (var k = 0; k < args.length; k++) {
+        if (this.board[i].row === args[k].row && this.board[i].column === args[k].col) {
           pieces.push(this.board[i])
         }
       }
@@ -124,11 +123,11 @@ gameLogic.prototype = {
       sCol = args.minCol
     }
     else if (args.row === args.col) {
-      if (row>3) {
+      if (args.row>3) {
         sRow = args.row + (args.maxRow - args.row)
         sCol = args.col - (args.maxRow - args.row)
       }
-      else if (row <= 3) {
+      else if (args.row <= 3) {
         sRow = args.row + (args.col - args.minCol)
         sCol = args.col - (args.col - args.minCol)
       }
@@ -141,6 +140,7 @@ gameLogic.prototype = {
   },
 
   diag2sp: function(args) {
+    console.log(args)
     var sRow = 0
     var sCol = 0
     var diffRow = args.row - args.minRow
@@ -159,8 +159,8 @@ gameLogic.prototype = {
       sCol = args.col
     }
     else if (diffRow == diffCol) {
-      sRow = minRow
-      sCol = minCol
+      sRow = args.minRow
+      sCol = args.minCol
     }
 
     return {row: sRow, col: sCol}
