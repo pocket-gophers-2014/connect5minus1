@@ -13,6 +13,11 @@ button {
 	margin-right: auto;
 }
 
+@font-face {
+  font-family: 'starjedi';
+  src: url('Starjedi.ttf');
+}
+
 h1{
 	text-align: center;
 	font-size: 70px;

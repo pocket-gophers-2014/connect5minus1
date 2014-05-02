@@ -23,11 +23,18 @@ gameController.prototype = {
     var buttonClass = this.view.buttonClass
     this.setListeners(buttonId,buttonClass)
     this.setPlayerDisplay()
+    this.view.resetBoard()
+  },
+
+  resetGame: function() {
+    this.board = new Board()
+    this.view.resetBoard()
   },
 
   setListeners: function(buttonId,buttonClass) {
     console.log("in set listeners")
     $("#button-row").on('click', "button", this.placePiece.bind(this))
+    $(".reset_button").on('click', this.resetGame.bind(this))
   },
 
 
