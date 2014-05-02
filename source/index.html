@@ -15,11 +15,12 @@
 
   <body>
       <div class="title grid_14 omega"><h1>STAR FOURS</h1></div>
-      <div class="players grid_7">Jedi Player</div>
-      <div class="players grid_7 omega">Sith Player</div>
+      <div class="grid_7" id="player1">Jedi Player</div>
+      <div class="players grid_7 omega" id="player2">Sith Player</div>
+      <!-- <button onclick="document.getElementById('myTune').play()">Play Music</button> -->
 
       <div id="button-row">
-        <button class="button-row grid_2 alpha" id="1"></button>
+        <button onclick="document.getElementById('1').play()" class="button-row grid_2 alpha" id="1"></button> <!--REVIEW THIS AND PUT IN JS CODE!!!!-->
         <button class="button-row grid_2" id="2"></button>
         <button class="button-row grid_2" id="3"></button>
         <button class="button-row grid_2" id="4"></button>
@@ -81,13 +82,13 @@
           <div class="row row5"></div>
           <div class="row row4"></div>
           <div class="row row3"></div>
-          <div class="row row2"><img src="img/empire_icon.jpeg"</div>
-          <div class="row row1"><img src="img/rebel_icon.jpg"></div>
+          <div class="row row2"></div>
+          <div class="row row1 player1"></div>
         </div>
 
       </div>
       <div class="grid_14">
-        <audio autoplay>
+        <audio autoplay controls>
           <source src="img/StarWars2.mp3" type="audio/mp3">o>
       </div>
   </body>

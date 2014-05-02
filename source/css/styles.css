@@ -24,8 +24,25 @@ h1{
 	font-weight: 900;
 }
 
-.players{
+.player1{
+	background: url("../img/rebel_icon.jpg");
+
+	background-repeat: no-repeat;
+}
+
+.player2{
+	background: url("../img/empire_icon.jpeg");
+	background-repeat: no-repeat;
+}
+
+#player1{
 	text-align: center;
+	/*background-color: red;*/
+}
+
+#player2{
+	text-align: center;
+	/*background-color: green;*/
 }
 /*.column {
   float: left;
