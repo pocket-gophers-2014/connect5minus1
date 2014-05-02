@@ -12,6 +12,10 @@ viewBoard.prototype = {
   updateCell: function(piece) {
     var currentCell = this.getCell(piece)
     console.log(currentCell)
+    audio=document.getElementById("strike");
+    audio.seekable.start(.5);
+    audio.seekable.end(1);
+    audio.play();
     if (piece.player.id === 1) {
 
       currentCell.classList.add("player1");
