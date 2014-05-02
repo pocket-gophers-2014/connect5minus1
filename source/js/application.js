@@ -32,7 +32,6 @@ gameController.prototype = {
   },
 
   setListeners: function(buttonId,buttonClass) {
-    console.log("in set listeners")
     $("#button-row").on('click', "button", this.placePiece.bind(this))
     $(".reset_button").on('click', this.resetGame.bind(this))
   },
