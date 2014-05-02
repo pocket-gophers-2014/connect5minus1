@@ -75,5 +75,8 @@ h1{
   margin-right: auto;
 }
 
+.current_player {
+  background-color: red;
+}
 
 

@@ -40,7 +40,7 @@ Board.prototype = {
 
 function Piece(player, row, column) {
   this.player = player
-  this.row = row
+  this.row = row + 1
   this.column = column
 }
 

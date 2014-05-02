@@ -22,8 +22,9 @@ gameController.prototype = {
     var buttonId = this.view.buttonId
     var buttonClass = this.view.buttonClass
     this.setListeners(buttonId,buttonClass)
-    this.setPlayerDisplay()
     this.view.resetBoard()
+    this.setPlayerDisplay()
+
   },
 
   resetGame: function() {
@@ -40,6 +41,7 @@ gameController.prototype = {
 
   setPlayerDisplay: function() {
     var currentPlayer = this.board.currentPlayer()
+    this.view.highlightCurrentPlayer(currentPlayer)
   },
 
   currentPlayer: function() {
@@ -51,7 +53,7 @@ gameController.prototype = {
     this.board.addPieceToColumn(column)
     var pieceData = this.board.lastPieceAdded()
     this.view.updateCell(pieceData)
-    // this.setPlayerDisplay()
+    this.setPlayerDisplay()
   }
 
 }
