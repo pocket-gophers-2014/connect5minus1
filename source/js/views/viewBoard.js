@@ -11,14 +11,37 @@ viewBoard.prototype = {
 
   updateCell: function(piece) {
     var currentCell = this.getCell(piece)
-    console.log(currentCell)
+    // console.log(currentCell)
+    // var height = $(currentCell).css("height")
+    var bottom_value = (6- piece.row) * 82
+    // console.log(bottom_value)
+    // console.log(height)
+
+    $(currentCell).css("bottom", bottom_value + "px")
+
+    $(currentCell).animate({
+      bottom: "0px"
+    }, 3000)
+
     if (piece.player.id === 1) {
       currentCell.style.backgroundColor= "red";
     }
     else {
-      currentCell.style.backgroundColor= "black";
+      currentCell.style.backgroundColor= "blue";
     }
   }
+
+  // updateCell: function(piece) {
+  //   var currentCell = this.getCell(piece)
+  //   // console.log(currentCell)
+  //   if (piece.player.id === 1) {
+  //     currentCell.style.backgroundColor= "red";
+  //   }
+  //   else {
+  //     currentCell.style.backgroundColor= "black";
+  //   }
+  // }
+
 }
 
 

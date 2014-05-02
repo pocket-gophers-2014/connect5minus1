@@ -56,12 +56,18 @@ h1{
 }*/
 
 .row {
+  position: relative;
   text-align: center;
   /*border: 1px solid #FFEA73;*/
   height: 82px;
   width: 100px;
   margin-right: auto;
   margin-left: auto;
+  position:;
+}
+
+.board_table {
+  /*position:relat;*/
 }
 
 
