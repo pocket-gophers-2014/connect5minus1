@@ -4,19 +4,26 @@ function viewBoard() {
 
 viewBoard.prototype = {
   getCell: function(piece) {
-    //find the specific cell
     var currentCell = document.querySelectorAll('.column')[piece.column-1].querySelector('.row'+(piece.row+1));
     return currentCell;
   },
 
   updateCell: function(piece) {
     var currentCell = this.getCell(piece)
-    console.log(currentCell)
+    var audio=document.getElementById("strike");
+    audio.play();
+    var bottom_value = (5- piece.row) * 82
+
+    $(currentCell).css("bottom", bottom_value + "px")
+    $(currentCell).animate({
+      bottom: "0px"
+    }, 2500)
+
     if (piece.player.id === 1) {
-      currentCell.style.backgroundColor= "red";
+      currentCell.classList.add("player1");
     }
     else {
-      currentCell.style.backgroundColor= "black";
+      currentCell.classList.add("player2");
     }
   },
 
@@ -62,6 +69,4 @@ viewBoard.prototype = {
   clearBoard: function() {
     this.board.innerHTML = null
   }
-
 }
-
