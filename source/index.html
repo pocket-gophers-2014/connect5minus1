@@ -10,16 +10,17 @@
     <script type="text/javascript" src = "js/models/gameLogic.js" ></script>
     <script type="text/javascript" src = "js/views/viewBoard.js" ></script>
     <script type="text/javascript" src="js/application.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
-
-
   </head>
 
   <body>
-      <div class="title grid_14 omega">
-        <h1>Star Fours</h1>
+
+      <div class="title grid_11 alpha">
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Star Fours</h1>
       </div>
-      <div class="grid_7" id="player1">J e d i  Player</div>
+
+      <button id="reset" class="grid_1 omega reset_button">RESET</button>
+
+      <div class="grid_7 alpha" id="player1">J e d i  Player</div>
       <div class="players grid_7 omega" id="player2">S i t h  Player</div>
       <!-- <button onclick="document.getElementById('myTune').play()">Play Music</button> -->
 
@@ -40,6 +41,6 @@
           <source src="img/StarWars2.mp3" type="audio/mp3">
         </audio>
       </div>
-      <audio id="strike" src="img/strike.wav"></audio>
+      <audio id="strike" src="img/strike_short.wav"></audio>
   </body>
 </html>

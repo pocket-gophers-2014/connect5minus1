@@ -13,9 +13,9 @@ viewBoard.prototype = {
 
   updateCell: function(piece) {
     var currentCell = this.getCell(piece)
-    var audio=document.getElementById("strike");
+    var audio = document.getElementById("strike");
     audio.play();
-    var bottom_value = (5- piece.row) * 82
+    var bottom_value = (6- piece.row) * 82
 
     $(currentCell).css("bottom", bottom_value + "px")
     $(currentCell).animate({
@@ -78,13 +78,13 @@ viewBoard.prototype = {
 
     if (currentPlayer.id === 1)
     {
-      this.player1.classList.add("current_player")
-      this.player2.classList.remove("current_player")
+      this.player1.classList.add("current_player1")
+      this.player2.classList.remove("current_player2")
     }
     else
     {
-      this.player2.classList.add("current_player")
-      this.player1.classList.remove("current_player")
+      this.player2.classList.add("current_player2")
+      this.player1.classList.remove("current_player1")
     }
   }
 }
