@@ -53,7 +53,22 @@ gameController.prototype = {
     this.board.addPieceToColumn(column)
     var pieceData = this.board.lastPieceAdded()
     this.view.updateCell(pieceData)
+    this.gameWon()
     this.setPlayerDisplay()
+
+  },
+
+  gameWon: function() {
+    if (this.gameOver())
+    {
+      alert("You've Won")
+      this.resetGame()
+    }
+  },
+
+  gameOver: function() {
+    var logic = new gameLogic(this.board.board, this.board.lastPieceAdded())
+    return logic.won()
   }
 
 }
