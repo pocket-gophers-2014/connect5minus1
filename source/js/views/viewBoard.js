@@ -13,10 +13,11 @@ viewBoard.prototype = {
     var currentCell = this.getCell(piece)
     console.log(currentCell)
     if (piece.player.id === 1) {
-      currentCell.style.backgroundColor= "red";
+
+      currentCell.classList.add("player1");
     }
     else {
-      currentCell.style.backgroundColor= "black";
+      currentCell.classList.add("player2");
     }
   }
 }
