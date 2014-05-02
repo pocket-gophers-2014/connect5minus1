@@ -100,4 +100,20 @@ h1{
   border-radius: 10px;
 }
 
+.winner {
+  font-size: 80px;
+  color: red;
+  text-align: center;
+  font-family: 'starjedi';
+  font-weight: bold;
+  width: 60%;
+  /*height:100px;*/
+  border: 1px solid Black;
+  text-align: left;
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  margin-left:-70px;
+  margin-top:-50px; 
+}
 

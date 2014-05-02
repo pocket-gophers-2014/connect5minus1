@@ -85,5 +85,20 @@ viewBoard.prototype = {
       this.player2.classList.add("current_player2")
       this.player1.classList.remove("current_player1")
     }
+  },
+
+  displayWinner: function(winner) {
+    var winner = $(document.createElement('div'))
+  if (player == 1){
+    winner.text("j e d i wins!")
+  } else {
+    winner.text("s i t h wins!")
+    winner.css("color", "green")
+  }
+  winner.attr("class", "winner")
+  // winner.css("position", "absolute")
+  $(".board_table").append(winner)
+
   }
 }
+
