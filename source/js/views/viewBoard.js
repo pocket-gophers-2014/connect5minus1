@@ -13,9 +13,9 @@ viewBoard.prototype = {
 
   updateCell: function(piece) {
     var currentCell = this.getCell(piece)
-    var audio=document.getElementById("strike");
+    var audio = document.getElementById("strike");
     audio.play();
-    var bottom_value = (5- piece.row) * 82
+    var bottom_value = (6- piece.row) * 82
 
     $(currentCell).css("bottom", bottom_value + "px")
     $(currentCell).animate({
