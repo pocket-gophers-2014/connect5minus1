@@ -30,6 +30,7 @@ gameController.prototype = {
   resetGame: function() {
     this.board = new Board()
     this.view.resetBoard()
+    this.setPlayerDisplay()
   },
 
   setListeners: function(buttonId,buttonClass) {
