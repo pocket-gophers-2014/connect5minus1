@@ -87,16 +87,15 @@ viewBoard.prototype = {
     }
   },
 
-  displayWinner: function(winner) {
+  displayWinner: function(player_id) {
     var winner = $(document.createElement('div'))
-  if (player == 1){
+  if (player_id == 2){
     winner.text("j e d i wins!")
   } else {
     winner.text("s i t h wins!")
     winner.css("color", "green")
   }
   winner.attr("class", "winner")
-  // winner.css("position", "absolute")
   $(".board_table").append(winner)
 
   }

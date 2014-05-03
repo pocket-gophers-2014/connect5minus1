@@ -61,8 +61,8 @@ gameController.prototype = {
   gameWon: function() {
     if (this.gameOver())
     {
-      alert("You've Won")
-      this.resetGame()
+      this.view.displayWinner(this.board.currentPlayer().id)
+      // this.resetGame()
     }
   },
 
