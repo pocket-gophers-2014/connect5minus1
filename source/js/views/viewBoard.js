@@ -15,6 +15,7 @@ viewBoard.prototype = {
     var currentCell = this.getCell(piece)
     var audio = document.getElementById("strike");
     audio.play();
+    // #CR careful of magic numbers here: why 6 and 82?
     var bottom_value = (6- piece.row) * 82
 
     $(currentCell).css("bottom", bottom_value + "px")
@@ -32,6 +33,7 @@ viewBoard.prototype = {
 
   resetBoard: function() {
     this.clearBoard()
+    // #CR 7 should be a board size variable
     this.appendColumns(7)
     this.applyAlphaOmegaToColumns()
   },
@@ -47,7 +49,7 @@ viewBoard.prototype = {
       boardTable.appendChild(newCol)
     }
   },
-
+// #CR jQuery has a .first() and .last() you can use here.
   applyAlphaOmegaToColumns: function() {
     columns = this.board.querySelectorAll('.column')
     firstColumn = columns[0]
@@ -74,6 +76,7 @@ viewBoard.prototype = {
   },
 
   highlightCurrentPlayer: function(currentPlayer) {
+    // #CR with jQuery you can use .toggleClass
 
     if (currentPlayer.id === 1)
     {
@@ -90,6 +93,7 @@ viewBoard.prototype = {
   displayWinner: function(player_id) {
     var winner = $(document.createElement('div'))
   if (player_id == 2){
+    // #CR set winning text with a player so it is easier to modify
     winner.text("j e d i wins!")
   } else {
     winner.text("s i t h wins!")

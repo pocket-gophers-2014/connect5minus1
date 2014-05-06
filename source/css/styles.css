@@ -1,4 +1,6 @@
-
+/*#CR - You have some repeated code - ie font-family.  Use
+inheritance to set this property on a higher level (like the body) so you
+have to set it in less places*/
 body {
 	background-image: url('../img/space_thumb.gif');
 	color: #FFEA73;
@@ -114,6 +116,6 @@ h1{
   top: 50%;
   left: 35%;
   margin-left:-70px;
-  margin-top:-50px; 
+  margin-top:-50px;
 }
 
