@@ -12,7 +12,8 @@ Board.prototype = {
     this.board.push(new Piece(this.currentPlayer(), this.countPiecesInColumn(column), column))
     this.toggleCurrentPlayer()
   },
-
+// #CR if you make your board a two dimensional array of rows and columns, this method and
+//others become much simpler because you can rely on array methods.
   countPiecesInColumn: function(columnNum) {
     var count = 0
     for(var i = 0; i <= this.board.length-1; i++) {
@@ -40,7 +41,7 @@ Board.prototype = {
 
 function Piece(player, row, column) {
   this.player = player
-  this.row = row + 1
+  this.row = row + 1 //#CR why not just use 0 based counting?
   this.column = column
 }
 
